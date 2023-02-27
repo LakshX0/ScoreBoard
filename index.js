@@ -48,10 +48,11 @@ function end() {
     if (homeScore > guestScore) {
         // console.log("Congartulations! Home Team is the Winner!!!🏆🎉")
         msg.textContent = homeWin
-    } if (homeScore < guestScore) {
+    } else if (homeScore < guestScore) {
         // console.log("Congartulations! Guest is the Winner!!!🏆🎉")
         msg.textContent = awayWin
-    } 
+    } else 
+        msg.textContent = draw
 }
 
 //msg.textContent
