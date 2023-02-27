@@ -1,8 +1,9 @@
 let homeScore = 0;
 let guestScore = 0;
 let msg = document.getElementById("msg")
-let homeWin = "Congratulations!! Home is the Winner!"
-let awayWin = "Congratulations!! Away is the Winner!"
+let homeWin = "Congratulations!! Home Team is the Winner!"
+let awayWin = "Congratulations!! Away Team is the Winner!"
+let draw = "What a good game! It's a DRAW!!!"
 
 document.getElementById("home-points").textContent = homeScore
 document.getElementById("guest-points").textContent = guestScore
@@ -45,11 +46,14 @@ function newGame() {
 
 function end() {
     if (homeScore > guestScore) {
-        // console.log("Congartulations! Home is the Winner!!!🏆🎉")
+        // console.log("Congartulations! Home Team is the Winner!!!🏆🎉")
         msg.textContent = homeWin
-    } else{
-        console.log("Congartulations! Guest is the Winner!!!🏆🎉")
+    } if (homeScore < guestScore) {
+        // console.log("Congartulations! Guest is the Winner!!!🏆🎉")
+        msg.textContent = awayWin
+    }else (homeScore == guestScore) {
+        msg.textContent = draw
     }
 }
 
-msg.textContent
+//msg.textContent
